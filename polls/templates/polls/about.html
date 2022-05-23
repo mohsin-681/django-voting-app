@@ -41,7 +41,7 @@
       <div id="mySidepanel" class="sidepanel">
          <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
          <a href="/polls">Home</a>
-         <a href="/polls/about.html">About</a>
+         <a class="active" href="/polls/about.html">About</a>
          <a href="/polls/about.html">Classes</a>
          <a href="/polls/about.html">Testimonials</a>
          <a href="/polls/contact.html">Contact</a>
@@ -78,7 +78,7 @@
           <div class="row">
              <div class="col-md-12">
                 <div class="titlepage">
-                     <h2>{{ question.question_text }}</h2>
+                     <h2>About</h2>
                 </div>
              </div>
           </div>
@@ -91,19 +91,10 @@
                <div class="col-md-12">
                   <div class="titlepage">
                     
-                     <!-- <figure><img src="{% static 'polls/images/coding.jpg' %}" alt="#"/></figure> -->
+                     <figure><img src="{% static 'polls/images/coding.jpg' %}" alt="#"/></figure>
                      <!-- <p> It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it It is a long established fact that a reader will be distracted by the readable content of a page when lookingusing Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it </p> -->
-                     <!-- <p>I'm a 23 year old developer based in Dubai. I write in Pyton, talk to databases and make servers do stuff. I am always open to exploring new opportunities. Please feel free to check out my work and let's have a coffee video chat if you'd like to hear more.</p> -->
-                     <!-- <h1>{{ question.question_text }}</h1> -->
-
-                     <ul>
-                     {% for choice in question.choice_set.all %}
-                         <li>{{ choice.choice_text }} -- {{ choice.votes }} vote{{ choice.votes|pluralize }}</li>
-                     {% endfor %}
-                     </ul>
-                     
-                     <br><a href="{% url 'polls:detail' question.id %}">Vote again?</a>
-                     <!-- <a class="read_more" href="#">Read More</a> -->
+                     <p>I'm a 23 year old developer based in Dubai. I write in Pyton, talk to databases and make servers do stuff. I am always open to exploring new opportunities. Please feel free to check out my work and let's have a coffee video chat if you'd like to hear more.</p>
+                     <a class="read_more" href="#">Read More</a>
                   </div>
                </div>
             </div>
@@ -164,3 +155,4 @@
       </script>
    </body>
 </html>
+

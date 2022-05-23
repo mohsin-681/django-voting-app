@@ -9,7 +9,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <meta name="viewport" content="initial-scale=1, maximum-scale=1">
       <!-- site metas -->
-      <title>brandon</title>
+      <title>Mohsin Feroz</title>
       <meta name="keywords" content="">
       <meta name="description" content="">
       <meta name="author" content="">
@@ -20,8 +20,7 @@
       <!-- Responsive-->
       <link rel="stylesheet" href="{% static 'polls/responsive.css' %}">
       <!-- fevicon -->
-      <link rel="icon" href="{% static 'polls/images/fevicon.png' %}" type="image/gif" />
-      
+      <link rel="icon" src="{% static 'polls/images/fevicon.png' %}" type="image/gif" />
       <!-- Scrollbar Custom CSS -->
       <link rel="stylesheet" href="{% static 'polls/jquery.mCustomScrollbar.min.css' %}">
       <!-- Tweaks for older IEs-->
@@ -32,7 +31,7 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
    </head>
    <!-- body -->
-   <body class="main-layout head_posstinhi">
+   <body class="main-layout head_posstinhi ">
       <!-- loader  -->
       <div class="loader_bg">
          <div class="loader"><img src="{% static 'polls/images/loading.gif' %}" alt="#" /></div>
@@ -44,7 +43,7 @@
          <a href="/polls/about.html">About</a>
          <a href="/polls/about.html">Classes</a>
          <a href="/polls/about.html">Testimonials</a>
-         <a href="/polls/contact.html">Contact</a>
+         <a class="active" href="/polls/contact.html">Contact</a>
       </div>
       <!-- header -->
       <header>
@@ -73,44 +72,47 @@
       </header>
       <!-- end header inner -->
       <!-- end header -->
-   <div class="red_bg">
+    <div class="red_bg">
        <div class="container">
           <div class="row">
              <div class="col-md-12">
                 <div class="titlepage">
-                     <h2>{{ question.question_text }}</h2>
+                    <h2>Contact</h2>
                 </div>
              </div>
           </div>
        </div>
     </div>
-      <!-- about section -->
-      <div id="about" class="about afbecros">
+     
+      <!-- contact section -->
+      <div id="contact" class="contact afbecros">
          <div class="container">
-            <div class="row ">
-               <div class="col-md-12">
-                  <div class="titlepage">
-                    
-                     <!-- <figure><img src="{% static 'polls/images/coding.jpg' %}" alt="#"/></figure> -->
-                     <!-- <p> It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it It is a long established fact that a reader will be distracted by the readable content of a page when lookingusing Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it </p> -->
-                     <!-- <p>I'm a 23 year old developer based in Dubai. I write in Pyton, talk to databases and make servers do stuff. I am always open to exploring new opportunities. Please feel free to check out my work and let's have a coffee video chat if you'd like to hear more.</p> -->
-                     <!-- <h1>{{ question.question_text }}</h1> -->
-
-                     <ul>
-                     {% for choice in question.choice_set.all %}
-                         <li>{{ choice.choice_text }} -- {{ choice.votes }} vote{{ choice.votes|pluralize }}</li>
-                     {% endfor %}
-                     </ul>
-                     
-                     <br><a href="{% url 'polls:detail' question.id %}">Vote again?</a>
-                     <!-- <a class="read_more" href="#">Read More</a> -->
-                  </div>
+            <div class="row">
+               <div class="col-md-10 offset-md-1">
+                  <form id="request" class="main_form">
+                     <div class="row">
+                        <div class="col-md-12 ">
+                           <input class="contactus" placeholder="Name" type="type" name="Name"> 
+                        </div>
+                        <div class="col-md-12">
+                           <input class="contactus" placeholder="Phone Number" type="type" name="Phone Number"> 
+                        </div>
+                        <div class="col-md-12">
+                           <input class="contactus" placeholder="Email" type="type" name="Email">                          
+                        </div>
+                        <div class="col-md-12">
+                           <input class="contactusmess" placeholder="Message" type="type" Message="Name">
+                        </div>
+                        <div class="col-md-12">
+                           <button class="send_btn">Send</button>
+                        </div>
+                     </div>
+                  </form>
                </div>
             </div>
          </div>
       </div>
-      <!-- about section -->
-     
+      <!-- end contact section -->
       <!--  footer -->
       <footer>
          <div class="footer">
@@ -128,7 +130,8 @@
                   </div>
                   <div class="col-md-12">
                      <div class="dolor">
-                        <p>Interested in hiring me for your project or just want to say hi? <br>You can fill in the contact form below or send me an email to <i>testing@gmail.com</i></p>
+                        <p>Interested in hiring me for your project or just want to say hi?
+                           You can fill in the contact form below or send me an email to testing@gmail.com</p>
                      </div>
                   </div>
                </div>
@@ -137,7 +140,7 @@
                <div class="container">
                   <div class="row">
                      <div class="col-md-12">
-                        <p>© 2019 All Rights . Design by<a href="https://html.design/"> Free Html Templates</a></p>
+                        <p>© 2019 All Rights Reserved. Design by<a href="https://html.design/"> Free Html Templates</a></p>
                      </div>
                   </div>
                </div>
@@ -146,7 +149,7 @@
       </footer>
       <!-- end footer -->
       <!-- Javascript files-->
-      <script src="{% static 'polls/js/jquery.min.js' %}""></script>
+      <script src="{% static 'polls/js/jquery.min.js' %}"></script>
       <script src="{% static 'polls/js/popper.min.js' %}"></script>
       <script src="{% static 'polls/js/bootstrap.bundle.min.js' %}"></script>
       <script src="{% static 'polls/js/jquery-3.0.0.min.js' %}"></script>
@@ -164,3 +167,4 @@
       </script>
    </body>
 </html>
+
